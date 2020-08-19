@@ -6,6 +6,9 @@ import org.junit.Test;
 
 import  org.junit.Assert.*;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class CalculadoraTest {
 
     @Test
@@ -15,5 +18,16 @@ public class CalculadoraTest {
         int soma = calculadora.somar("1+1+1");
 
         Assert.assertEquals(3, soma);
+    }
+
+    @Test
+    public void testSomarComMock() {
+        Calculadora calc = mock(Calculadora.class);
+
+        when(calc.somar("1+2")).thenReturn(10);
+
+        int res = calc.somar("1+2");
+
+        Assert.assertEquals(10,res);
     }
 }
