@@ -8,4 +8,12 @@ public class Calculadora {
         }
         return soma;
     }
+
+    public int somar(int... n){
+        int soma = 0;
+        for (int num : n) {
+            soma += num;
+        }
+        return soma;
+    }
 }
