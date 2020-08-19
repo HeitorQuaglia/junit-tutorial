@@ -1,4 +1,4 @@
-package com;
+package com.teste;
 
 import com.teste.Calculadora;
 import org.junit.Assert;
